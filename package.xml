@@ -1,38 +1,51 @@
 <?xml version="1.0"?>
+<?xml-model
+    href="http://download.ros.org/schema/package_format3.xsd"
+    schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>ira_laser_tools</name>
-  <version>2.0.7</version>
-  <description>The ira_laser_tools package. These nodes are meant to provide some utils for lasers, like listen to different laser scan sources and merge them in a single scan or generate virtual laser scans from a pointcloud.</description>
+  <version>3.0.0</version>
+  <description>
+    The ira_laser_tools package. These nodes are meant to provide some utils
+    for lasers, like listen to different laser scan sources and merge them
+    in a single scan or generate virtual laser scans from a pointcloud.
+  </description>
 
-  <url>http://www.ros.org/wiki/ira_laser_tools</url>
-  <maintainer email="augusto.ballardini@unimib.it">Augusto</maintainer>
-  <maintainer email="p.colombo45@campus.unimib.it">Pietro</maintainer>
-  <maintainer email="f.delia2@campus.unimib.it">Fabio</maintainer>
+  <maintainer email="rafaelm@robotnik.es">Rafael Martin</maintainer>
 
   <license>BSD</license>
 
+  <url type="website">http://wiki.ros.org/ira_laser_tools</url>
+  <url type="repository">https://github.com/RobotnikAutomation/ira_laser_tools.git</url>
+  <url type="bugtracker">https://github.com/RobotnikAutomation/ira_laser_tools/issues</url>
+
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>sensor_msgs</depend>
-  <depend>libpcl-all-dev</depend>
-  <depend>pcl_ros</depend>
-  <depend>geometry_msgs</depend>
-  <depend>std_msgs</depend>
-  <depend>tf2</depend>
-  <depend>tf2_ros</depend>
-  <depend>laser_geometry</depend>
-  <depend>rclcpp</depend>
-  <depend>rclcpp_action</depend>
-  <depend>rclcpp_lifecycle</depend>
-  <!-- Needed to work around https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894656 on Debian Stretch -->
-  <depend>libvtk-qt</depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>laser_geometry</build_depend>
+  <build_depend>rcl_interfaces</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>libpcl-all-dev</build_depend>
 
-  <exec_depend>rosidl_default_runtime</exec_depend>
-  <exec_depend>eigen3</exec_depend>
-  <exec_depend>pcl</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>laser_geometry</exec_depend>
+  <exec_depend>rcl_interfaces</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>libpcl-all-dev</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
   </export>
-
 </package>
